@@ -35,7 +35,7 @@ Participants should bring their laptops and plan to participate actively. Laptop
 | 10:00 - 10:15 | Break |
 | 10:15 - 11:45 | [HPC Software Environment Part 2](docs/hpc_software_environment/hpc_software_environment_01.md) |
 | 11:45 - 13:00 | Lunch |
-| 13:00 - 14:30 | Data Management and Collaboration |
+| 13:00 - 14:30 | [Data Management and Collaboration](docs/data_management/data_management.md) |
 | 14:30 - 14:45 | Break |
 | 14:45 - 17:00 | [Hands-on Exercises & Bring-your-own-code Workshop](docs/hands_on_02.md) |
 
@@ -43,11 +43,11 @@ Participants should bring their laptops and plan to participate actively. Laptop
 
 | Time | Topic |
 |--------|--------------------------------------------------|
-|  8:30 - 10:00 | Developing Life Sciences Workflows Part 1 |
+|  8:30 - 10:00 | [Developing Life Sciences Workflows Part 1](docs/workflows/workflows1_1.md) |
 | 10:00 - 10:15 | Break |
-| 10:15 - 11:45 | Developing Life Sciences Workflows Part 2 |
+| 10:15 - 11:45 | [Developing Life Sciences Workflows Part 2](docs/LSworflow2_JWS.md) |
 | 11:45 - 13:00 | Lunch |
-| 13:00 - 14:30 | Optimization and Parallelization of Workflows for HPC |
+| 13:00 - 14:30 | [Optimization and Parallelization of Workflows for HPC](docs/optimization_parallelization/optimization_parallelization_01.md) |
 | 14:30 - 14:45 | Break |
 | 14:45 - 17:00 | Hands-on Exercises & Bring-your-own-code Workshop |
 
