@@ -1,9 +1,14 @@
 # Python - Functions & Plotting
 
+---
+
 **Objectives:**
 - Discover functions and apply functions.
 - Plot simple graphs from data.
 
+---
+
+## Functions
 
 Often, we want to do more than add, subtract, multiply, and divide values of data.
 NumPy knows how to do more complex operations on arrays.
@@ -11,7 +16,7 @@ If we want to find the average inflammation for all patients on all days,
 for example,
 we can ask NumPy to compute `data`'s mean value:
 
-~~~
+~~~python
 print(numpy.mean(data))
 ~~~
 
@@ -25,7 +30,7 @@ If variables are nouns, functions are verbs: they do things with variables.
 > needing any input. For example, checking the current time
 > doesn't require any input.
 >
-> ~~~
+> ~~~python
 > import time
 > print(time.ctime())
 > ~~~
@@ -38,7 +43,7 @@ NumPy has lots of useful functions that take an array as input.
 Let's use three of those functions to get some descriptive values about the dataset.
 We'll also use multiple assignment, a convenient Python feature that will enable us to do this all in one line.
 
-~~~
+~~~python
 maxval, minval, stdval = numpy.max(data), numpy.min(data), numpy.std(data)
 
 print('maximum inflammation:', maxval)
@@ -61,18 +66,21 @@ such as the maximum value per patient or the average value per day.
 One way to do this is to create a new temporary array of the data we want,
 then ask it to do the calculation:
 
-~~~
+~~~python
 patient_0 = data[0, :] # 0 on the first axis, everything on the second
 print('maximum inflammation for patient 0:', patient_0.max())
 ~~~
 
-Everything in a line of code following the '#' symbol is a **comment** that is ignored by the computer.
-Comments allow programmers to leave explanatory notes for other programmers or their future selves.
+> ## Comments in Python
+> 
+> Everything in a line of code following the '#' symbol is a [comment](python_reference.md#comment) 
+> that is ignored by the computer.
+> Comments allow programmers to leave explanatory notes for other programmers or their future selves.
 
 We don't actually need to store the row in a variable of its own.
 Instead, we can combine the selection and the function call:
 
-~~~
+~~~python
 print('maximum inflammation for patient 2:', numpy.max(data[2, :]))
 ~~~
 
@@ -86,13 +94,13 @@ operation across an axis:
 To support this, most array functions allow us to specify the axis we want to work on.
 We can ask for the average across axis 0 (rows in our 2D example):
 
-~~~
+~~~python
 print(numpy.mean(data, axis=0))
 ~~~
 
 As a quick check, we can ask this array what its shape is:
 
-~~~
+~~~python
 print(numpy.mean(data, axis=0).shape)
 ~~~
 
@@ -100,27 +108,98 @@ The expression `(40,)` tells us we have an N×1 vector,
 so this is the average inflammation per day for all patients.
 We can average across axis 1 (columns in our 2D example):
 
-~~~
+~~~python
 print(numpy.mean(data, axis=1))
 ~~~
 
 which is the average inflammation per patient across all days.
 
-The mathematician Richard Hamming once said,
-"The purpose of computing is insight, not numbers,"
-and the best way to develop insight is often to visualize data.
-Visualization deserves an entire lecture (of course) of its own,
-but we can explore a few features of Python's `matplotlib` library here.
-While there is no "official" plotting library,
-this package is the de facto standard.
-First, we will import the `pyplot` module from `matplotlib`
+>## Exercise - Change in Inflamation
+>
+>This patient data is _longitudinal_ in the sense that each row represents a
+>series of observations relating to one individual. This means that change
+>inflamation is a meaningful concept.
+>
+>The `numpy.diff()` function takes a NumPy array and returns the 
+>difference along a specified axis.
+>
+>Which axis would it make sense to use this function along?
+>
+> > ## Solution
+> > Since the row axis (0) is patients, it does not make sense to get the
+> > difference between two arbitrary patients. The column axis (1) is in
+> > days, so the differnce is the change in inflamation -- a meaningful
+> > concept.
+> >
+> > ~~~python
+> > numpy.diff(data, axis=1)
+> > ~~~
+> {: .solution}
+>
+>If the shape of an individual data file is `(60, 40)` (60 rows and 40
+>columns), what would the shape of the array be after you run the `diff()`
+>function and why?
+>
+> > ## Solution
+> > The shape will be `(60, 39)` because there is one fewer difference between
+> > columns than there are columns in the data.
+> {: .solution}
+>
+>How would you find the largest change in inflammation for each patient? Does
+>it matter if the change in inflammation is an increase or a decrease?
+>
+> > ## Solution
+> > By using the `numpy.max()` function after you apply the `numpy.diff()`
+> > function, you will get the largest difference between days.
+> >
+> > ~~~python
+> > numpy.max(numpy.diff(data, axis=1), axis=1)
+> > ~~~
+> >
+> > ~~~python
+> > array([  7.,  12.,  11.,  10.,  11.,  13.,  10.,   8.,  10.,  10.,   7.,
+> >          7.,  13.,   7.,  10.,  10.,   8.,  10.,   9.,  10.,  13.,   7.,
+> >         12.,   9.,  12.,  11.,  10.,  10.,   7.,  10.,  11.,  10.,   8.,
+> >         11.,  12.,  10.,   9.,  10.,  13.,  10.,   7.,   7.,  10.,  13.,
+> >         12.,   8.,   8.,  10.,  10.,   9.,   8.,  13.,  10.,   7.,  10.,
+> >          8.,  12.,  10.,   7.,  12.])
+> > ~~~
+> >
+> > If a difference is a *decrease*, then the difference will be negative. If
+> > you are interested in the **magnitude** of the change and not just the
+> > direction, the `numpy.absolute()` function will provide that.
+> >
+> > Notice the difference if you get the largest _absolute_ difference
+> > between readings.
+> >
+> > ~~~python
+> > numpy.max(numpy.absolute(numpy.diff(data, axis=1)), axis=1)
+> > ~~~
+> >
+> > ~~~python
+> > array([ 12.,  14.,  11.,  13.,  11.,  13.,  10.,  12.,  10.,  10.,  10.,
+> >         12.,  13.,  10.,  11.,  10.,  12.,  13.,   9.,  10.,  13.,   9.,
+> >         12.,   9.,  12.,  11.,  10.,  13.,   9.,  13.,  11.,  11.,   8.,
+> >         11.,  12.,  13.,   9.,  10.,  13.,  11.,  11.,  13.,  11.,  13.,
+> >         13.,  10.,   9.,  10.,  10.,   9.,   9.,  13.,  10.,   9.,  10.,
+> >         11.,  13.,  10.,  10.,  12.])
+> > ~~~
+> >
+> {: .solution}
+
+
+## Plotting
+
+While there is no "official" plotting library, Python's `matplotlib` is the de facto standard.
+First, we will import the `matplotlib` module
 and use two of its functions to create and display a heat map of our data:
 
-~~~
-import matplotlib.pyplot
+~~~python
+import matplotlib
+%matplotlib inline
 image = matplotlib.pyplot.imshow(data)
-matplotlib.pyplot.show()
 ~~~
+<!--- matplotlib.pyplot.show()   # Not sure why this isn't required --->
 
 ![Heatmap of the Data](http://swcarpentry.github.io/python-novice-inflammation/fig/01-numpy_71_0.png)
 
@@ -144,11 +223,11 @@ As we can see, inflammation rises and falls over a 40-day period.
 
 Let's take a look at the average inflammation over time:
 
-~~~
+~~~python
 ave_inflammation = numpy.mean(data, axis=0)
 ave_plot = matplotlib.pyplot.plot(ave_inflammation)
-matplotlib.pyplot.show()
 ~~~
+<!--- matplotlib.pyplot.show() --->
 
 ![Average Inflammation Over Time](http://swcarpentry.github.io/python-novice-inflammation/fig/01-numpy_73_0.png)
 
@@ -158,17 +237,17 @@ The result is roughly a linear rise and fall, which is suspicious:
 based on other studies, we expect a sharper rise and slower fall.
 Let's have a look at two other statistics:
 
-~~~
+~~~python
 max_plot = matplotlib.pyplot.plot(numpy.max(data, axis=0))
-matplotlib.pyplot.show()
 ~~~
+<!--- matplotlib.pyplot.show() --->
 
 ![Maximum Value Along The First Axis](http://swcarpentry.github.io/python-novice-inflammation/fig/01-numpy_75_1.png)
 
-~~~
+~~~python
 min_plot = matplotlib.pyplot.plot(numpy.min(data, axis=0))
-matplotlib.pyplot.show()
 ~~~
+<!--- matplotlib.pyplot.show() --->
 
 ![Minimum Value Along The First Axis](http://swcarpentry.github.io/python-novice-inflammation/fig/01-numpy_75_3.png)
 
@@ -192,12 +271,12 @@ different variable (`axes1`, `axes2`, `axes3`). Once a subplot is created, the a
 be titled using the `set_xlabel()` command (or `set_ylabel()`).
 Here are our three plots side by side:
 
-~~~
+<!--- 
 import numpy
 import matplotlib.pyplot
-
 data = numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
-
+ --->
+~~~python
 fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
 
 axes1 = fig.add_subplot(1, 3, 1)
@@ -214,9 +293,8 @@ axes3.set_ylabel('min')
 axes3.plot(numpy.min(data, axis=0))
 
 fig.tight_layout()
-
-matplotlib.pyplot.show()
 ~~~
+<!--- matplotlib.pyplot.show() --->
 
 ![The Previous Plots as Subplots](http://swcarpentry.github.io/python-novice-inflammation/fig/01-numpy_80_0.png)
 
@@ -228,6 +306,17 @@ what to draw for each one,
 and that we want a tight layout.
 (Perversely, if we leave out that call to `fig.tight_layout()`,
 the graphs will actually be squeezed together more closely.)
+
+> ## Exercise - Make your Own Plot
+> 
+> Create a plot showing the standard deviation (`numpy.std`) of the inflammation data for each day across all patients.
+>
+> > ## Solution
+> > ~~~python
+> > std_plot = matplotlib.pyplot.plot(numpy.std(data, axis=0))
+> > ~~~
+> {: .solution}
+
 
 > ## Scientists Dislike Typing
 >

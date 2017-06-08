@@ -1,10 +1,10 @@
 # Python - Repeating Actions with Loops
 
-## Questions
+**Questions**
 
 - How can I do the same operations on many different values?
 
-## Objectives
+**Objectives**
 
 - Explain what a for loop does.
 - Correctly write for loops to repeat simple calculations.
@@ -91,8 +91,20 @@ The numbers in the diagram denote which loop cycle the character was printed in 
 
 We can call the [loop variable](python_reference.md#loop-variable) anything we like,
 but there must be a colon at the end of the line starting the loop,
-and we must indent anything we want to run inside the loop. Unlike many other languages, there is no
-command to signify the end of the loop body (e.g. end for); what is indented after the for statement belongs to the loop.
+and we must indent anything we want to run inside the loop. Unlike many other languages, **there is no
+command to signify the end of the loop body (e.g. end for); what is indented after the for statement belongs to the loop.**
+
+> ## Tabs or Spaces?
+>
+> According to the [Style Guide for Python](https://www.python.org/dev/peps/pep-0008/)...
+>
+> > Spaces are the preferred indentation method.  *Indent using 4 spaces.*
+> >
+> > Tabs should be used solely to remain consistent with code that is already indented with tabs.
+> > 
+> > Python 3 disallows mixing the use of tabs and spaces for indentation.
+> > 
+> > Python 2 code indented with a mixture of tabs and spaces should be converted to using spaces exclusively.
 
 
 > ## What's in a name?
@@ -254,7 +266,7 @@ so we should always use it when we can.
 >     # Do something with i and x
 > ~~~
 >
-> The loop above assigns the index to `i` and the value to `x`.
+> The loop above assigns, from `xs` the index to `i` and the value to `x`.
 >
 > Suppose you have encoded a polynomial as a list of coefficients in
 > the following way: the first element is the constant term, the
@@ -282,7 +294,7 @@ so we should always use it when we can.
 > > ~~~
 > {: .solution}
 
-## Keypoints
+**Keypoints**
 
 - Use `for variable in sequence` to process the elements of a sequence one at a time.
 - The body of a for loop must be indented.
