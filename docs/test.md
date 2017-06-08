@@ -13,6 +13,7 @@
 ~~~bash
 $ vi .bashrc
 ~~~
+
 > ## Solution
-> `now see here bucko!`
+> `now see here bucko...`
 > {: .solution}
