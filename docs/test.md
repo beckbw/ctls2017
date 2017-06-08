@@ -2,9 +2,9 @@
 
 ## first pass of testing stuff
 
-> | Table |
-> | --- |
-> | sponge |
+| Table |
+| --- |
+| sponge |
 > > ### Problem
 > > stuff about the problem
 > > Question?
