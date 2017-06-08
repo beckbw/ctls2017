@@ -49,9 +49,9 @@ $ ln -s mustard/flower/control_group.db mustard/leaf/
    * The admins might kill you job.
   + Use `$WORK` instead.
 
-  <br>
+  <br/>
 
   Prev: [Best Practices](data_management_04_01.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
 
-    <br>
+    <br/>
     &copy; 2017 Texas Advanced Computing Center

@@ -105,9 +105,9 @@ $ lfs setstripe -c <#>  <filename>
 * Striping will have a greater impact on large or rapidly accessed files.
 * On our small files, it will have a neglible impact.
 
-<br>
+<br/>
 
 Prev: [File Systems](data_management_01_02.md) | Next: [TACC File Systems](data_management_01_03.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
 
-<br>
+<br/>
 &copy; 2017 Texas Advanced Computing Center

@@ -96,9 +96,9 @@ $ ls -rt
 $ tar -tvzf test.tar.gz
 ```
 
-  <br>
+  <br/>
 
   Prev: [FS Info ](data_management_02_01.md) | Next: [Transferring](data_management_03_02.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
 
-  <br>
+  <br/>
   &copy; 2017 Texas Advanced Computing Center

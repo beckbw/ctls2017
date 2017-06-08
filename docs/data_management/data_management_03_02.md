@@ -25,9 +25,9 @@ $ scp myfile ${ARCHIVER}:${ARCHIVE}/myfile
 ```
 
 
-  <br>
+  <br/>
 
   Prev: [Cleaning Up ](data_management_03_01.md) | Next: [Module 4: Best Practices](data_management_04_01.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
 
-  <br>
+  <br/>
   &copy; 2017 Texas Advanced Computing Center
