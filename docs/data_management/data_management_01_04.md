@@ -7,7 +7,7 @@
 | Active vs. Inactive data||
 |---|---|
 | <strong>ACTIVE : Actively being used of generated</strong> ||
-|  + Primary data copied from lab devices? |`$WORK, $SCRATCH`|
+|  + Primary data copied from lab devices? |`$WORK, $SCRATCH`{: .solution}|
 |  + A database used for all analysis pipelines? |`$WORK`|
 |  + Analysis data being generated? |`$WORK, $SCRATCH`|
 |  + Analysis data generated but only being used to make plots? |`$WORK`|

@@ -108,3 +108,6 @@ $ lfs setstripe -c <#>  <filename>
 <br>
 
 Prev: [File Systems](data_management_01_02.md) | Next: [TACC File Systems](data_management_01_03.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+<br>
+&copy; 2017 Texas Advanced Computing Center
