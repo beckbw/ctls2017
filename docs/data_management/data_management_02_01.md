@@ -218,3 +218,6 @@ Disk quotas for group G-814141 (gid 814141):
   <br>
 
   Prev: [Active data](data_management_01_04.md) | Next: [Module 3: Cleaning UP ](data_management_03_01.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+  <br>
+  &copy; 2017 Texas Advanced Computing Center

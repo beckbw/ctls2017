@@ -5,7 +5,7 @@
  + 20,000+ humangenes
  + 60,000+ human protein variants
  + measurement of the expression patterns of all these requires many files for each element of the biology central dogma
- 
+
  <br>
 
 * Data complexity
@@ -13,7 +13,7 @@
   + large storage capacity needed, either for individual files or collectively
 
  <br>
- 
+
  + This data varies in format and type
    * raw text
    * delimited text
@@ -40,3 +40,6 @@
 <br>
 
 Next: [File Systems](data_management_01_02.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+<br>
+&copy; 2017 Texas Advanced Computing Center

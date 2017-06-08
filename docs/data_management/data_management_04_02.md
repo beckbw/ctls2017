@@ -40,8 +40,8 @@ rm: remove write-protected regular empty file `test/research_0/data_0_3'?
 $ ln -s mustard/flower/control_group.db mustard/leaf/
 ```
 
-* **When avoid duplication, don't trivially install common software into you `$HOME` **
- + ** QUIZ: what is your `/home` quota ?
+* **When avoiding duplication, don't trivially install common software into you `$HOME`**
+ + **QUIZ: what is your `/home` quota ?**
  + Avoid placing common software, especially executables in `/home`
    * `/home` quota is small ( 5 GB)
    * `/home` has worse I/O performance than `$WORK` or `$SCRATCH`
@@ -52,3 +52,6 @@ $ ln -s mustard/flower/control_group.db mustard/leaf/
   <br>
 
   Prev: [Best Practices](data_management_04_01.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+    <br>
+    &copy; 2017 Texas Advanced Computing Center

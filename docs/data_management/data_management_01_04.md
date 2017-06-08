@@ -23,3 +23,6 @@
 <br>
 
 Prev: [TACC File Systems](data_management_01_03.md) | Next: [Module 2: FS Info ](data_management_02_01.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+<br>
+&copy; 2017 Texas Advanced Computing Center

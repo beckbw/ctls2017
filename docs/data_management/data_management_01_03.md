@@ -43,3 +43,6 @@
 <br>
 
 Prev: [File Systems](data_management_01_02.md) | Next: [Active Data](data_management_01_04.md) | UP: [Data Management Overview](data_management.md) | Top: [Course Overview](../../index.md)
+
+<br>
+&copy; 2017 Texas Advanced Computing Center
