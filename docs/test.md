@@ -6,15 +6,13 @@
 | --- |
 | sponge |
 
-> > ### Problem
-> > stuff about the problem
-> > #### Question?
+> ### Problem
+> stuff about the problem
+> #### Question?
 
 ~~~bash
 $ vi .bashrc
 ~~~
-> > #### Solution
-> > ```
-> > now see here bucko!
-> > ```
-> > {: .solution}
+> #### Solution
+> `now see here bucko!`
+> {: .solution}
