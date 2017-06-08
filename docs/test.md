@@ -8,8 +8,8 @@
 
 > > ### Problem
 > > stuff about the problem
-> > ####
-> > Question?
+> > #### Question?
+
 ~~~bash
 $ vi .bashrc
 ~~~
