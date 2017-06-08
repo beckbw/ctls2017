@@ -13,4 +13,4 @@
 > > ```
 > > now see here bucko!
 > > ```
-> > {.solution}
+> > {: .solution}
